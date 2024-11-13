@@ -1,0 +1,492 @@
+
+
+
+   /* src/pages/Dashboard.css */
+
+body {
+    font-family: 'Roboto', sans-serif; /* A modern font for better aesthetics */
+    background-color: #f0f2f5; /* Light gray background */
+    margin: 0;
+    padding: 20px;
+  }
+  
+  h1 {
+    text-align: center;
+    color: #e31313;
+    margin-bottom: 20px;
+  }
+  
+  .add-button {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* display: block;
+    margin: 0 auto 20px; Center the button */
+    position: absolute; /* Set position to absolute */
+    top: 20px; /* Set distance from the top */
+    right: 20px; /* Set distance from the right */
+  }
+  
+  .add-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .table-container {
+    max-width: 1200px; /* Limit the width of the table */
+    margin: 0 auto; /* Center the container */
+    overflow: hidden; /* Contain floated elements */
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+    background-color: white; /* Card-like background */
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #e0e0e0; /* Soft border */
+  }
+  
+  th {
+    background-color: #007bff;
+    color: white;
+    font-weight: bold;
+  }
+  
+  tr:hover {
+    background-color: #f1f1f1; /* Highlight on hover */
+  }
+  
+  button {
+    padding: 8px 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  button:hover {
+    transform: translateY(-2px); /* Lift effect on hover */
+  }
+  
+  .button-view {
+    background-color: #28a745;
+    color: white;
+  }
+  
+  .button-view:hover {
+    background-color: #218838;
+  }
+  
+  .button-delete {
+    background-color: #dc3545;
+    color: white;
+  }
+  
+  .button-delete:hover {
+    background-color: #c82333;
+  }
+  
+  .no-devices {
+    text-align: center;
+    font-style: italic;
+    color: #777;
+    padding: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .add-button {
+      width: 100%;
+    }
+  
+    th, td {
+      padding: 10px; /* Adjust padding for smaller screens */
+    }
+  }
+  
+
+  .custom-column {
+    margin: 0 5px; /* Adjust this value for desired spacing */
+    padding: 60px; /* Optional: for internal padding */
+    background-color: #f8f9fa; /* Optional: background color */
+    border: 1px solid #dee2e6; /* Optional: border around each box */
+    border-radius: 4px; /* Optional: rounded corners */
+    border-radius: 20px;
+  }
+  .position-1,
+.position-2,
+.position-3 {
+  padding: 15px; /* Reduced padding for the top columns */
+}
+
+  
+  .dashboard {
+    display: flex;
+    flex-direction: row;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  .top-section {
+    background-color: #f8f9fa; /* Light gray background for contrast */
+    padding: 20px; /* Add padding for spacing */
+    flex: 1; /* Adjust this to change the height ratio */
+  }
+  
+  .bottom-section {
+    background-color: #ffffff; /* White background */
+    flex: 1; /* Adjust this to change the height ratio */
+  } 
+/* Optional: Add margin between rows if desired */
+.top-section .row + .row {
+  margin-top: 10px;
+}
+
+
+.bottom-section {
+  background-color: #ffffff; /* White background */
+  
+  flex: 1;
+}
+.bottom-section .row {
+  margin: 15px;
+
+}
+
+.custom-column2 {
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  height: 250px; /* Set the height of the boxes */
+  display: flex;
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+}
+.custom-column3 {
+  padding: 10px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  height: 400px; /* Set the height of the boxes */
+  display: flex;
+  align-items: center; /* Vertically center content */
+  justify-content: center; /* Horizontally center content */
+}
+
+.custom-column4 {
+  padding: 10px;
+  background-color: white;
+  border: 1px solid #dee2e6;
+  border-radius: 4px;
+  height: 400px; /* Set the height of the boxes */
+  display: flex;
+  
+
+}
+
+/* box details */
+
+.position-text {
+  display: flex;
+  flex-direction: column;
+  /* flex-direction: column; */
+  justify-content: flex-start; /* Align content to the top */
+  align-items: flex-start; 
+}
+
+.position-title {
+  font-size: 15px; /* Adjust size as needed */
+  font-weight: bold;
+  text-transform: uppercase; /* Converts text to block letters */
+  margin-bottom: 8px; /* Space between title and number */
+}
+
+.position-number {
+  font-size: 30px; /* Adjust size as needed */
+  font-weight: bold;
+  color: #333; /* Adjust color */
+  margin-bottom: 10px; /* Space between number and status */
+}
+
+.position-status {
+  font-size: 18px; /* Adjust size as needed */
+  font-style:san-serif;
+  color: #ff7782; /* Red color for emphasis */
+}
+
+/* Different text colors for each position status */
+.status-urgent {
+  color: #ff0000; /* Red color for "Urgently Needed" */
+}
+
+.status-hiring {
+  color: #448ee4; /* Green color for "Active Hiring" */
+}
+
+.status-department {
+  color: #d823a2; /* Orange color for "Department" */
+}
+.status-men {
+  color:#737474; /* Orange color for "Department" */
+}
+.status-women {
+  color:#737474; /* Orange color for "Department" */
+}
+
+
+.position-1 {
+  background-color: #e0f7fa; /* Light cyan */
+}
+
+.position-2 {
+  background-color: #ffdbe9; /* Light green */
+}
+
+.position-3 {
+  background-color: #fff3e0; /* Light orange */
+}
+
+
+
+/* Optional: Custom styles for other rows and columns */
+.custom-column3 {
+  background-color: #ffffff;
+  /* padding: 20px; */
+}
+
+
+
+.custom-column2 {
+  background-color: #000080; /* Navy blue background */
+  padding: 20px;
+  border-radius: 8px; /* Optional: rounded corners */
+  color: #ffffff; /* White text color for contrast */
+  position: relative; /* To position the button inside */
+}
+.position-title1 {
+  font-size: 20px; /* Large heading */
+  font-weight: bold;
+  margin-bottom: 30px;
+  text-align: left;
+}
+.headingcolor {
+  background-color: rgb(11, 11, 100);
+  /* padding: 10px;  */
+  width: 100%; 
+  margin-left: -20px; /* Align with container edges if it has padding */
+  margin-right: -20px; /* Align with container edges if it has padding */
+  border-radius: 8px 8px 0 0; /* Match container's border radius */
+}
+
+
+.position-number1 {
+  font-size: 10px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.position-boldheading {
+  font-size: 15px; /* Bigger, bold heading */
+  font-weight: bold;
+  color: white; /* Optional: distinct color for emphasis */
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+.status-line1
+{
+  font-size: 1em; /* Normal text size */
+  margin-bottom: 10px;
+  text-align: left;
+}
+.status-line2 {
+  font-size: 1em; /* Normal text size */
+  margin-top: 30px;
+  text-align: left;
+}
+
+.btn2 {
+  background-color: #ff4c4c; /* Red button */
+  color: #ffffff; /* White text */
+  padding: 10px 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  cursor: pointer;
+  
+}
+
+.btn2:hover {
+  background-color: #e04343; /* Slightly darker red on hover */
+}
+
+
+
+
+
+
+
+
+
+.custom-column3 {
+  background-color: #f0f0f0; /* Light background */
+  /* padding: 20px; */
+  border-radius: 8px;
+  color: #333;
+}
+
+.position-number2 {
+  display: flex;
+  justify-content: space-between; /* Aligns left and right */
+   /* Vertically centers the content */
+  /* margin-bottom: 150px; */
+  position: relative;
+  align-items: flex-start; 
+}
+
+.position-title2 {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  /* margin-bottom: 70px; */
+}
+
+.dropdown .btn-secondary {
+  color: #333;
+  background-color: #e6e6fa; /* Light background color for dropdown */
+  border: none;
+}
+
+
+
+
+.position-boldheading2 {
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.status-box {
+  background-color: #e6e6fa; /* Light purple */
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+}
+
+ .status2-line2, .status2-line3 {
+  font-size: 14px;
+  margin: 5px 0;
+}
+.status2-line2{
+  color: #333;
+  font-size: 15px; /* Bigger, bold heading */
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: left;
+}
+.dropdown-toggle {
+  width: 100%; /* Make all buttons take the full available width */
+}
+
+.time{
+  font-size: 12px;
+  color: rgb(115, 103, 103);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.position-rightcol2 {
+  background-color: #f8f9fa; /* Light background color for the section */
+  padding: 20px;
+  border-radius: 8px; /* Optional rounded corners */
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr; /* 1 column for the title */
+  text-align: center;
+}
+
+.position-title2 {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.position-number2 {
+  display: flex;
+  justify-content: space-between; /* Aligns title to the left and dropdown to the right */
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.dropdown-toggle {
+  width: 100%; /* Makes the dropdown take up the full width */
+  text-align: left; /* Align the text to the left */
+  padding: 10px;
+}
+
+.time {
+  font-size: 0.9em;
+  color: #888; /* Light gray color for the time */
+}
+
+.position-staus, .position-status {
+  margin-bottom: 5px;
+}
+
+.status2-line {
+  width: 100%;
+}
+
+.status2-line3 {
+  width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+

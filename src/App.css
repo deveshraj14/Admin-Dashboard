@@ -1,0 +1,168 @@
+/* src/pages/Devicesinfo.css */
+
+body {
+  font-family: 'Roboto', sans-serif; /* Ensure consistent font usage */
+  background-color: #f0f2f5; /* Light background color */
+  margin: 0;
+  padding: 0; /* Add padding to body for better spacing */
+}
+
+h1 {
+  text-align: center; /* Center the heading */
+  color: #333; /* Dark color for heading */
+  margin-bottom: 20px; /* Spacing below the heading */
+}
+
+.device-info-container {
+  max-width: 600px; /* Set a maximum width for the container */
+  margin: 0 auto; /* Center the container */
+  padding: 20px; /* Add padding inside the container */
+  background-color: white; /* White background for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Shadow for depth */
+}
+
+.device-info-item {
+  margin-bottom: 15px; /* Spacing between info items */
+}
+
+.device-info-item label {
+  font-weight: bold; /* Bold for labels */
+  color: #555; /* Darker color for labels */
+}
+
+.device-info-item p {
+  margin: 5px 0; /* Spacing for paragraphs */
+  color: #444; /* Darker text color for details */
+}
+
+.loading-message {
+  text-align: center; /* Center the loading message */
+  color: #999; /* Gray color for loading text */
+  font-style: italic; /* Italicize the loading message */
+}
+
+
+
+
+
+
+
+
+
+
+.device-info-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.device-info-item {
+  margin-bottom: 15px;
+}
+
+.device-info-item label {
+  font-weight: bold;
+  color: #555;
+}
+
+.device-info-item p {
+  margin: 5px 0;
+  color: #444;
+}
+
+.loading-message {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.device-info-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.device-info-item {
+  margin-bottom: 15px;
+}
+
+.device-info-item label {
+  font-weight: bold;
+  color: #555;
+}
+
+.device-info-item p {
+  margin: 5px 0;
+  color: #444;
+}
+
+.loading-message {
+  text-align: center;
+  color: #999;
+  font-style: italic;
+}
+
+/* AddDevice Styles */
+.add-device-container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.add-device-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.add-device-form div {
+  margin-bottom: 15px;
+}
+
+.add-device-form label {
+  font-weight: bold;
+  color: #555;
+  margin-bottom: 5px;
+}
+
+.add-device-form input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.add-device-form button {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-device-form button:hover {
+  background-color: #0056b3;
+}

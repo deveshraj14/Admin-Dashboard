@@ -1,0 +1,32 @@
+
+.drawer {
+    width: 240px; /* Width of the sidebar */
+    background-color: white; 
+    color: #f1b9b7; /* Text color for headings */
+  }
+  .MuiDrawer-root {
+    background-color: white !important; /* Apply the green background to the sidebar */
+}
+  
+  .drawer .MuiIconButton-root {
+    color: #f1b9b7; /* Icon color */
+  }
+  
+  .drawer .MuiListItemButton-root {
+    color: #f1b9b7; /* Default list item text color */
+  }
+  
+  
+  .drawer .MuiListItemText-root {
+    display: flex;
+    justify-content: flex-start; /* Align text to the left */
+  }
+  
+  .drawer .MuiListItemText-primary {
+    color: #f1b9b7; /* Primary text color */
+  }
+  
+  .drawer .MuiListItemText-root.collapsed {
+    display: none; /* Hide text when collapsed */
+  }
+  

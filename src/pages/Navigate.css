@@ -1,0 +1,22 @@
+/* Navigation.css */
+
+.navigation {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start; /* Align items to the left */
+    padding: 16px; /* Padding for the navigation */
+    background-color: #f1f1f1; /* Background color */
+    border-bottom: 1px solid #ccc; /* Border at the bottom */
+  }
+  
+  .search-input {
+    margin-left: 76px; /* Margin for the input */
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    width: 200px; /* Fixed width for search input */
+    position: absolute; /* Set position to absolute */
+    top: 35px; /* Set distance from the top */
+    right: 133px; /* Set distance from the right */
+  }
+  

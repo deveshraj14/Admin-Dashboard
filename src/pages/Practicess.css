@@ -1,0 +1,58 @@
+/* Practicess.css */
+
+/* Overall body style */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif; /* Ensure you import this font in your HTML or use a different one */
+    background-color: #f4f4f4; /* Light background for contrast */
+  }
+  
+  /* Sidebar styles */
+  .drawer {
+   
+ /* width: 240px; Set a fixed width for the sidebar */
+    flex-shrink: 0; /* Prevent shrinking */
+    height: 100vh; /* Full height */
+    position: fixed; /* Keep it fixed */
+    transition: width 0.3s; /* Smooth transition for width changes */
+     background-color: white;
+    /* color: rgb(92, 19, 194); Sidebar text color */
+  }
+  
+  /* Collapsed sidebar */
+  .drawer.collapsed {
+    width: 60px; /* Width when collapsed */
+  }
+  
+  /* Main Content Area */
+  .main-content {
+    margin-left: 240px; /* Default margin for the full sidebar */
+    transition: margin-left 0.3s; /* Smooth transition when sidebar collapses */
+    padding: 0px; /* Padding for the content area */
+    height: 100vh; /* Full height */
+    background-color: rgb(187, 56, 56); /* White background for the content area */
+    border-radius: 8px; /* Rounded corners */
+  }
+  
+  /* When sidebar is collapsed, adjust main content */
+  .main-content.collapsed {
+    margin-left: 60px; /* Adjust margin for collapsed sidebar */
+  }
+  
+  /* AppBar styles */
+  .AppBar {
+    position: fixed; /* Fixed position */
+    top: 0;
+    right: 0;
+    left: 240px; /* Default left margin for full sidebar */
+    height: 64px; /* Height of the AppBar */
+    background-color: #3f51b5; /* Same color as sidebar */
+    z-index: 10; /* Keep it above other components */
+    transition: left 0.3s; /* Smooth transition for left adjustment */
+  }
+  
+  /* Adjust AppBar when sidebar is collapsed */
+  .AppBar.collapsed {
+    left: 60px; /* Adjust left margin when collapsed */
+  }
+  
